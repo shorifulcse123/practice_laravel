@@ -37,3 +37,12 @@ Route::get('View/post/{id}','App\Http\Controllers\PostController@viewPost');
 Route::get('Edit/post/{id}','App\Http\Controllers\PostController@editPost');
 Route::post('update/{id}','App\Http\Controllers\PostController@update');
 Route::get('delete/post/{id}','App\Http\Controllers\PostController@delete');
+
+Route::get('/student/page','App\Http\Controllers\StudentController@index')->name('student');
+Route::post('/student/Post/page','App\Http\Controllers\StudentController@addStudentPost')->name('store.student');
+Route::get('/all/student/page','App\Http\Controllers\StudentController@addStudentview')->name('all.student');
+Route::get('View/student/{id}','App\Http\Controllers\StudentController@SingleStudentView');
+Route::get('delete/student/{id}','App\Http\Controllers\StudentController@SingleStudentdelete');
+Route::get('edit/student/{id}','App\Http\Controllers\StudentController@SingleStudentedit');
+Route::post('update.student{id}','App\Http\Controllers\StudentController@SingleStudentupdate');
+
